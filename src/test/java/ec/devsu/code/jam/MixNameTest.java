@@ -13,19 +13,6 @@ public class MixNameTest {
     MixName mixName = new MixName();
 
     @Test
-    void shouldBeReturnEmtyArray() {
-        String[] firstNames = new String[] {};
-        assertEquals("-", mixName.generateFullNames("", firstNames));
-    }
-
-    @Test
-    void shouldBeMixOneName() {
-        String[] firstNames = new String[] { "Miguel" };
-        String[] lastNames = new String[] {};
-        assertEquals("Miguel- ", mixName.generateFullNames("", firstNames));
-    }
-
-    @Test
     void shouldBeMixTwoNames() {
         String[] firstNames = new String[] { "Miguel", "Alejandro" };
         String[] lastNames = new String[] {};
@@ -60,33 +47,12 @@ public class MixNameTest {
 
     @Test
     void shouldBeA() {
-        assertEquals("A", mixName.concatenar("A", 0));
+        assertEquals("A", mixName.concatenarCadenas("A", 0));
     }
 
     @Test
     void shouldBeAB() {
-        assertEquals("AB", mixName.concatenar("AB", 0));
-    }
-
-    @Test
-    public void shouldCombine(){
-        String cadena="ABC";
-        assertEquals( "AAA ABB", mixName.combinar("", cadena,  cadena));
-    }
-
-    @Test
-    void shouldBeABC() {
-        assertEquals("ABC", mixName.concatenar("", "ABC"));
-    }
-
-    @Test
-    void shouldBeABCNuevo() {
-        assertEquals("ABC", mixName.concatenarS("", "ABC"));
-    }
-
-    @Test
-    void shouldBeABCAAABBBCCCNuevo() {
-        assertEquals("ABC", mixName.concatenarCab("", "ABC"));
+        assertEquals("AB", mixName.concatenarCadenas("AB", 0));
     }
 
 }

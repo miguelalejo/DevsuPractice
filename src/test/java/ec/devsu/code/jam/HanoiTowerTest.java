@@ -19,8 +19,8 @@ public class HanoiTowerTest {
         Stack<Integer> B = new Stack<>();
         Stack<Integer> C = new Stack<>();
         int size = A.size();
-        hanoiTower = new HanoiTower(A, B, C);
-        hanoiTower.mover(A.size());
+        hanoiTower = new HanoiTower();
+        hanoiTower.mover(A.size(), A, B, C);
         assertEquals(0, A.size());
         assertEquals(0, B.size());
         assertEquals(size, C.size());

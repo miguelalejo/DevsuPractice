@@ -65,7 +65,7 @@ public class MixName {
             return String.valueOf(cadena.charAt(0));
         }
         String cadenaTemp = cadena.substring(index + 1);
-        return String.valueOf(cadena.charAt(index)) + concatenar(cadenaTemp, index++);
+        return String.valueOf(cadena.charAt(index)) + concatenarCadenas(cadenaTemp, index++);
     }
     // ABC //ABC //
     // BC -> //CB
